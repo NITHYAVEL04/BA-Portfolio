@@ -4,17 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nithya Sri Palanivel | Technical Business Analyst Portfolio</title>
-  <script type="module">
-    import mermaid from 'https://jsdelivr.net';
-    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: {
-      primaryColor: '#eff6ff',
-      primaryTextColor: '#1e3a8a',
-      primaryBorderColor: '#2563eb',
-      lineColor: '#475569',
-      secondaryColor: '#fef2f2',
-      tertiaryColor: '#f8fafc'
-    }});
-  </script>
   <style>
     :root {
       --primary: #1e3a8a;
@@ -89,23 +78,6 @@
     .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1rem; margin-top: 1rem; }
     .box { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
     .box h4 { font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--primary); margin-bottom: 0.4rem; }
-    .diagram-wrapper {
-      margin-top: 1.25rem;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      overflow-x: auto;
-    }
-    .diagram-title {
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.03em;
-    }
-    .mermaid { display: flex; justify-content: center; }
     table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
     th, td { border: 1px solid var(--border); padding: 0.65rem; text-align: left; }
     th { background: #eff6ff; color: var(--primary); }
@@ -185,29 +157,6 @@
         <p>Implemented baseline-learning anomaly detection (AWS CloudWatch Anomaly Detection, Lambda, SNS). Chose managed cloud detection over custom ML models to reduce maintenance overhead.</p>
       </div>
     </div>
-
-    <div class="diagram-wrapper">
-      <div class="diagram-title">Process Flow Comparison: As-Is vs. To-Be Alerting</div>
-      <div class="mermaid">
-        flowchart TD
-          subgraph AS_IS["AS-IS: Static Threshold Alerting (High False Positives)"]
-            A1[EC2 Traffic Spike] --> A2{CPU > 80% Fixed Limit?}
-            A2 -- Yes --> A3[Trigger Alarm]
-            A3 --> A4[Manual Ops Triage]
-            A4 --> A5[False Positive / Alert Fatigue]
-            A2 -- No --> A6[Misses Off-Peak Anomaly]
-          end
-
-          subgraph TO_BE["TO-BE: Dynamic AIOps Anomaly Detection"]
-            B1[EC2 Metrics Stream] --> B2[CloudWatch Anomaly Detection]
-            B2 --> B3{Deviates from Learned Baseline?}
-            B3 -- Yes --> B4[Lambda Enriches Alert Context]
-            B4 --> B5[SNS Routes Actionable Alert]
-            B3 -- No --> B6[Normal Traffic - Zero Noise]
-          end
-      </div>
-    </div>
-
     <table>
       <thead>
         <tr>
@@ -236,3 +185,40 @@
     <div class="case-grid">
       <div class="box">
         <h4>As-Is vs. To-Be Process Improvement</h4>
+        <p><strong>As-Is:</strong> Manual server setup steps caused configuration drift and longer troubleshooting.<br>
+        <strong>To-Be:</strong> Standardized Infrastructure-as-Code templates (Terraform, Ansible) and automated CI/CD gates (Jenkins, Argo CD).</p>
+      </div>
+      <div class="box">
+        <h4>Measurable Business Impact</h4>
+        <p>Maintained <strong>99%+ system availability</strong> across high-traffic airline environments, shortened environment setup time, and sped up incident triage via real-time Grafana/CloudWatch KPI dashboards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Study 3 -->
+  <div class="case-study">
+    <div class="case-header">
+      <h3>Case Study 3: Eliminating Manual Hosting Bottlenecks via Self-Service Templates</h3>
+      <span class="badge">Process Automation & Governance</span>
+    </div>
+    <p><strong>Business Problem:</strong> Manual cloud console setups for static web hosting created delivery bottlenecks, lacked version history, and introduced human configuration risks.</p>
+    <div class="case-grid">
+      <div class="box">
+        <h4>Requirements & Solution</h4>
+        <p>Translated manual hosting checklists into single-command, repeatable deployment templates using Terraform and CloudFormation on AWS S3 with Git version control.</p>
+      </div>
+      <div class="box">
+        <h4>Business Outcome</h4>
+        <p>Replaced multi-step manual console work with an auditable, single-command deployment workflow, ensuring consistent security and zero manual setup errors.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Nithya Sri Palanivel • Technical Business Analyst Portfolio • Built for GitHub Pages</p>
+</footer>
+
+</body>
+</html>
