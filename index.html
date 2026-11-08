@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nithya Sri Palanivel | Technical Business Analyst Portfolio</title>
+  <script type="module">
+    import mermaid from 'https://jsdelivr.net';
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: {
+      primaryColor: '#eff6ff',
+      primaryTextColor: '#1e3a8a',
+      primaryBorderColor: '#2563eb',
+      lineColor: '#475569',
+      secondaryColor: '#fef2f2',
+      tertiaryColor: '#f8fafc'
+    }});
+  </script>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: #fff;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.3rem; margin-bottom: 0.5rem; }
+    header .subtitle { font-size: 1.15rem; color: #93c5fd; font-weight: 600; margin-bottom: 1rem; }
+    header p { max-width: 720px; margin: 0 auto 1.5rem; color: #e2e8f0; }
+    .contact-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; font-size: 0.9rem; }
+    .contact-bar a, .contact-bar span {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .container { max-width: 1050px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    h2.section-title {
+      font-size: 1.55rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .tag {
+      background: #eff6ff;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      border-radius: 5px;
+    }
+    .case-study {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 10px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .case-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+    .case-header h3 { font-size: 1.25rem; color: #0f172a; }
+    .badge { background: #dbeafe; color: #1e40af; font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 999px; }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .box { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .box h4 { font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--primary); margin-bottom: 0.4rem; }
+    .diagram-wrapper {
+      margin-top: 1.25rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    .diagram-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.03em;
+    }
+    .mermaid { display: flex; justify-content: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--border); padding: 0.65rem; text-align: left; }
+    th { background: #eff6ff; color: var(--primary); }
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nithya Sri Palanivel</h1>
+  <div class="subtitle">Technical Business Analyst | Requirements Elicitation, Process Automation & Cloud Operations</div>
+  <p>
+    Gold-Medalist B.Tech graduate in Computer Science & Business Systems (9.32 CGPA) with 1.3 years of enterprise IT operations experience supporting British Airways at TCS. Specialized in translating technical system workflows into structured business requirements, KPI dashboards, and automated processes.
+  </p>
+  <div class="contact-bar">
+    <span>Tamil Nadu, India (Open to Hyderabad)</span>
+    <a href="mailto:nithyasripalanivel65@gmail.com">nithyasripalanivel65@gmail.com</a>
+    <span>+91 7094829381</span>
+    <a href="https://github.com" target="_blank">GitHub: NITHYAVEL04</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <h2 class="section-title">Core Business Analysis & Technical Competencies</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Business Analysis & Strategy</h3>
+      <div class="tags">
+        <span class="tag">Requirements Elicitation</span>
+        <span class="tag">BRD / FRD Documentation</span>
+        <span class="tag">User Stories & Acceptance Criteria</span>
+        <span class="tag">As-Is / To-Be Process Modeling</span>
+        <span class="tag">Gap & Root Cause Analysis</span>
+        <span class="tag">Agile / Scrum</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Data, KPIs & Reporting</h3>
+      <div class="tags">
+        <span class="tag">Operational KPI Dashboards</span>
+        <span class="tag">SLA & Incident Triage</span>
+        <span class="tag">Grafana & CloudWatch</span>
+        <span class="tag">SQL & Excel Analysis</span>
+        <span class="tag">Anomaly & Trend Detection</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Domain & Technical Stack</h3>
+      <div class="tags">
+        <span class="tag">AWS & Azure Cloud Governance</span>
+        <span class="tag">IAM Security & Compliance</span>
+        <span class="tag">CI/CD Release Workflows</span>
+        <span class="tag">Python Scripting</span>
+        <span class="tag">Git / GitHub</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Featured Business Analysis Case Studies</h2>
+
+  <!-- Case Study 1 -->
+  <div class="case-study">
+    <div class="case-header">
+      <h3>Case Study 1: Reducing Operational Alert Fatigue via Dynamic Anomaly Detection</h3>
+      <span class="badge">AIOps & Incident Management</span>
+    </div>
+    <p><strong>Business Problem:</strong> Fixed CPU alert thresholds (e.g., 80% limit) caused false-positive alert fatigue during normal peak business hours while missing abnormal off-peak spikes, slowing down IT incident triage.</p>
+    <div class="case-grid">
+      <div class="box">
+        <h4>Stakeholder & Root Cause Analysis</h4>
+        <p><strong>Stakeholders:</strong> IT Operations Responders, Engineering Leads, SLA Owners.<br>
+        <strong>Root Cause:</strong> Static rules ignored cyclical workload patterns and required manual threshold updates.</p>
+      </div>
+      <div class="box">
+        <h4>To-Be Solution & Trade-off</h4>
+        <p>Implemented baseline-learning anomaly detection (AWS CloudWatch Anomaly Detection, Lambda, SNS). Chose managed cloud detection over custom ML models to reduce maintenance overhead.</p>
+      </div>
+    </div>
+
+    <div class="diagram-wrapper">
+      <div class="diagram-title">Process Flow Comparison: As-Is vs. To-Be Alerting</div>
+      <div class="mermaid">
+        flowchart TD
+          subgraph AS_IS["AS-IS: Static Threshold Alerting (High False Positives)"]
+            A1[EC2 Traffic Spike] --> A2{CPU > 80% Fixed Limit?}
+            A2 -- Yes --> A3[Trigger Alarm]
+            A3 --> A4[Manual Ops Triage]
+            A4 --> A5[False Positive / Alert Fatigue]
+            A2 -- No --> A6[Misses Off-Peak Anomaly]
+          end
+
+          subgraph TO_BE["TO-BE: Dynamic AIOps Anomaly Detection"]
+            B1[EC2 Metrics Stream] --> B2[CloudWatch Anomaly Detection]
+            B2 --> B3{Deviates from Learned Baseline?}
+            B3 -- Yes --> B4[Lambda Enriches Alert Context]
+            B4 --> B5[SNS Routes Actionable Alert]
+            B3 -- No --> B6[Normal Traffic - Zero Noise]
+          end
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User Story ID</th>
+          <th>Agile User Story</th>
+          <th>Acceptance Criteria (Given / When / Then)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>US-101</td>
+          <td>As an Operations Analyst, I want alerts triggered by historical usage baselines so I only investigate real anomalies.</td>
+          <td><strong>Given</strong> an EC2 instance has baseline metrics, <strong>When</strong> CPU deviates outside expected bands, <strong>Then</strong> an SNS alert triggers within 2 minutes.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Case Study 2 -->
+  <div class="case-study">
+    <div class="case-header">
+      <h3>Case Study 2: Standardizing Enterprise Release Workflows & 99%+ SLA Reliability</h3>
+      <span class="badge">Enterprise Cloud & Aviation Domain (TCS – British Airways)</span>
+    </div>
+    <p><strong>Business Context:</strong> Supporting British Airways Dev, QA, and Production environments required strict 99%+ availability. Manual configuration differences between QA and Prod risked release delays and incident escalations.</p>
+    <div class="case-grid">
+      <div class="box">
+        <h4>As-Is vs. To-Be Process Improvement</h4>
